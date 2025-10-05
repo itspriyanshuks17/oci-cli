@@ -31,7 +31,7 @@ You can install the OCI CLI on Windows using either the **MSI installer** or **P
 
 ---
 
-## 🐧 Linux and <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/cec078e6-b9bc-47bd-9265-40446b7de95a" />
+## 🐧 Linux and <img width="1" height="2" alt="image" src="https://github.com/user-attachments/assets/cec078e6-b9bc-47bd-9265-40446b7de95a" />
  macOS Installation
 
 ### **Linux (All Major Distributions)**
