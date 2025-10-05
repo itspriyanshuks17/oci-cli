@@ -1,63 +1,95 @@
-To download and install the Oracle Cloud Infrastructure (OCI) CLI, follow these official steps, which vary depending on your operating system:[1][2][3]
+# 🧭 Oracle Cloud Infrastructure (OCI) CLI — Installation Guide (2025)
 
-### Windows Installation
-- Use the MSI installer or PowerShell.
-    - With MSI: Download from Oracle's GitHub releases and run the installer.[1]
-    - With PowerShell: Open PowerShell as administrator, run:
-      ```powershell
-      Set-ExecutionPolicy RemoteSigned
-      Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1
-      iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1'))
-      ```
-- After installation, verify with:
-  ```
-  oci --version
-  ```
+The **Oracle Cloud Infrastructure (OCI) Command Line Interface (CLI)** is a powerful tool that enables users to manage OCI resources directly from the terminal. Below are the official installation steps for **Windows**, **Linux**, and **macOS** systems.
 
+---
 
-### Linux and macOS Installation
-- For most Linux distributions, run:
-  ```
-  bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
-  ```
-  - To accept all defaults silently, add: `--accept-all-defaults`.[3][1]
+## 🪟 Windows Installation
 
-- For macOS with Homebrew:
-  ```
-  brew install oci-cli
-  ```
+You can install the OCI CLI on Windows using either the **MSI installer** or **PowerShell**.
 
+### **Option 1: Using MSI Installer**
 
-### Other Environments
-- Oracle Linux Cloud Developer images and Autonomous Linux may have it pre-installed.[2][4]
-- For offline installation, download a ZIP from GitHub OCI CLI releases, unzip, and run the install script for your OS.[5][3]
+1. Download the latest **MSI installer** from the [Oracle GitHub OCI CLI Releases Page](https://github.com/oracle/oci-cli/releases).
+2. Run the installer and follow the on-screen instructions.
 
-### Verifying the Installation
-- After the installation, confirm by running:
-  ```
-  oci --version
-  ```
+### **Option 2: Using PowerShell**
 
+1. Open **PowerShell** as **Administrator**.
+2. Run the following commands:
 
-These methods cover the standard download and setup for all major operating systems. Oracle’s official docs provide further troubleshooting tips and configuration guides if needed.[2][3][1]
+   ```powershell
+   Set-ExecutionPolicy RemoteSigned
+   Invoke-WebRequest https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1 -OutFile install.ps1
+   iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.ps1'))
+   ```
+3. After installation, verify by running:
 
-[1](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
-[2](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
-[3](https://github.com/oracle/oci-cli)
-[4](https://www.geraldonit.com/installing-the-oracle-cloud-infrastructure-cli-on-oracle-linux-8/)
-[5](https://docs.public.content.oci.oraclecloud.com/en-us/iaas/Content/API/SDKDocs/climanualinst.htm)
-[6](https://www.youtube.com/watch?v=rEHwcJdRf8M)
-[7](https://oracleshare.com/configure-oracle-oci-command-line-interface-cli-in-windows/)
-[8](https://www.youtube.com/watch?v=bY3jQMMHxdw)
-[9](https://dev.to/farisdurrani/advanced-oci-cli-syntax-and-commands-4hpp)
-[10](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliconfigure.htm)
-[11](https://docs.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/)
-[12](https://help.okta.com/oag/en-us/content/topics/access-gateway/deploy-oci-cli.htm)
-[13](https://database-heartbeat.com/2022/09/26/oci-cli-virtual-environment/)
-[14](https://learn.arm.com/install-guides/oci-cli/)
-[15](https://www.youtube.com/watch?v=vDMnYY_juM4)
-[16](https://skillbuilders.com/6-steps-to-install-and-configure-oci-cli/)
-[17](https://www.youtube.com/watch?v=jtGad3GSYh0)
-[18](https://www.linkedin.com/pulse/how-install-use-oci-cli-mac-os-from-scratch-valentin-lemains)
-[19](https://docs.cloud.jpsovereigncloud.jp/en-us/iaas/tools/oci-cli/3.67.0/oci_cli_docs/oci.html)
-[20](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+   ```powershell
+   oci --version
+   ```
+
+---
+
+## 🐧 Linux and <img width="512" height="512" alt="image" src="https://github.com/user-attachments/assets/cec078e6-b9bc-47bd-9265-40446b7de95a" />
+ macOS Installation
+
+### **Linux (All Major Distributions)**
+
+Run the following command in your terminal:
+
+```bash
+bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+```
+
+To automatically accept all defaults:
+
+```bash
+bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)" --accept-all-defaults
+```
+
+### **macOS (via Homebrew)**
+
+If you have Homebrew installed, simply run:
+
+```bash
+brew install oci-cli
+```
+
+---
+
+## 🧩 Other Environments
+
+* **Oracle Linux Cloud Developer Images** and **Autonomous Linux** may already include the OCI CLI pre-installed.
+* For **offline installations**, download the ZIP file from [OCI CLI Releases on GitHub](https://github.com/oracle/oci-cli/releases), unzip it, and run the install script corresponding to your operating system.
+
+---
+
+## ✅ Verifying the Installation
+
+Once the installation is complete, confirm the CLI is working by running:
+
+```bash
+oci --version
+```
+
+You should see an output similar to:
+
+```
+3.x.x
+```
+
+---
+
+## 📚 References
+
+1. [Oracle Docs: Install the CLI](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/cliinstall.htm)
+2. [Oracle Docs: CLI Concepts](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm)
+3. [OCI CLI GitHub Repository](https://github.com/oracle/oci-cli)
+4. [Installing OCI CLI on Oracle Linux](https://www.geraldonit.com/installing-the-oracle-cloud-infrastructure-cli-on-oracle-linux-8/)
+5. [Manual (Offline) Installation Guide](https://docs.public.content.oci.oraclecloud.com/en-us/iaas/Content/API/SDKDocs/climanualinst.htm)
+6. [YouTube: OCI CLI Installation Tutorial](https://www.youtube.com/watch?v=rEHwcJdRf8M)
+7. [How to Configure OCI CLI in Windows](https://oracleshare.com/configure-oracle-oci-command-line-interface-cli-in-windows/)
+8. [Advanced OCI CLI Commands (Dev.to)](https://dev.to/farisdurrani/advanced-oci-cli-syntax-and-commands-4hpp)
+9. [OCI CLI Official Documentation](https://docs.oracle.com/iaas/tools/oci-cli/latest/oci_cli_docs/)
+10. [SkillBuilders — OCI CLI Configuration Steps](https://skillbuilders.com/6-steps-to-install-and-configure-oci-cli/)
